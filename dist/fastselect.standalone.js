@@ -152,7 +152,7 @@
 
                 callback(options.parseResponse ? options.parseResponse.call(self, data, self) : data);
 
-            });
+            }, 'json');
 
         },
 
@@ -688,7 +688,7 @@
             $(
                 '<div data-text="' + optionModel.text + '" data-value="' + optionModel.value + '" class="' + this.options.choiceItemClass + '">' +
                    optionModel.text +
-                    '<button class="' + this.options.choiceRemoveClass + '" type="button">×</button>' +
+                    '<button class="' + this.options.choiceRemoveClass + '" type="button">x</button>' +
                 '</div>'
             ).insertBefore(this.$queryInput);
 
@@ -1132,7 +1132,7 @@
 
                 onDone && onDone.call(self);
 
-            });
+            }, 'json');
 
         },
 
